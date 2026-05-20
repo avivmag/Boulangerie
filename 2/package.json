@@ -1,0 +1,13 @@
+{
+  "name": "restaurant-benefit-app",
+  "version": "1.0.0",
+  "private": true,
+  "description": "One-time restaurant dessert benefit landing page with CSV lead tracking.",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

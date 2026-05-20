@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>הטבת קינוחים במסעדה</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main class="page-shell">
+      <section class="benefit-panel" aria-labelledby="benefit-title">
+        <div class="brand-row">
+          <div class="brand-mark" aria-hidden="true">R</div>
+          <div>
+            <p class="eyebrow">הטבה לאורחי המסעדה</p>
+            <h1 id="benefit-title">2 קינוחים במתנה</h1>
+          </div>
+        </div>
+
+        <p class="lead">
+          ממלאים פרטים פעם אחת, מציגים את הקוד לצוות, ונהנים משני קינוחי בית במתנה.
+        </p>
+
+        <form id="claimForm" class="claim-form" novalidate>
+          <label>
+            <span>שם מלא</span>
+            <input name="fullName" autocomplete="name" required minlength="2" placeholder="לדוגמה: דנה לוי" />
+          </label>
+
+          <label>
+            <span>טלפון נייד</span>
+            <input name="phone" autocomplete="tel" inputmode="tel" required placeholder="050-0000000" />
+          </label>
+
+          <label>
+            <span>כתובת מייל</span>
+            <input name="email" autocomplete="email" inputmode="email" type="email" required placeholder="name@example.com" />
+          </label>
+
+          <label class="check-row">
+            <input name="marketingConsent" type="checkbox" />
+            <span>אשמח לקבל עדכונים והטבות ישירות לנייד</span>
+          </label>
+
+          <button class="primary-button" type="submit">קבלת ההטבה</button>
+          <p id="formMessage" class="form-message" role="status"></p>
+        </form>
+      </section>
+
+      <section id="couponPanel" class="coupon-panel is-hidden" aria-live="polite">
+        <p class="eyebrow">הקוד שלך</p>
+        <strong id="couponCode">DESSERT-000000</strong>
+        <p>יש להציג את הקוד לצוות המסעדה לפני קבלת החשבון.</p>
+      </section>
+    </main>
+
+    <script src="/app.js"></script>
+  </body>
+</html>
