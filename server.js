@@ -225,16 +225,6 @@ const server = http.createServer((req, res) => {
     return;
   }
 
-  if (req.method === "GET" && url.pathname === "/api/export") {
-    ensureDataFiles();
-    res.writeHead(200, {
-      "Content-Type": "text/csv; charset=utf-8",
-      "Content-Disposition": 'attachment; filename="restaurant-leads.csv"'
-    });
-    fs.createReadStream(LEADS_FILE).pipe(res);
-    return;
-  }
-
   const filePath = getPublicFile(url.pathname);
   if (!filePath) {
     sendJson(res, 403, { error: "forbidden" });
